@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hycollege.net.setting.Activity_Setting">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#deb887"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="left"
+            android:padding="10dp"
+            android:text="设置"
+            android:background="#deb887"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/btnreturn"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:text="返回"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="60dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="网络"
+                android:textColor="#ff888888"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1dp"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0" >
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="10dp" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:textSize="16sp"
+                                android:textColor="#ff333333"
+                                android:text="仅WIFI下联网 "
+                                />
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="2G/3G/4G网络下不耗流量"
+                                android:textColor="#6E6E6E"
+                                android:layout_marginTop="10dp" />
+                        </LinearLayout>
+                        <CheckBox
+                            android:id="@+id/checkBox1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="true"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17dp"
+                            android:text="使用2G/3G/4G网络阅读"
+                            android:textColor="#ff333333"
+                            android:textSize="16sp"
+                            />
+
+                        <CheckBox
+                            android:id="@+id/checkBox2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/more_page_row3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17dp"
+                            android:text="使用2G/3G/4G网络下载"
+                            android:textColor="#ff333333"
+                            android:textSize="16sp" />
+                        <CheckBox
+                            android:id="@+id/checkBox3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17dp"
+                            android:text="WIFI下软件自动跟新"
+                            android:textColor="#ff333333"
+                            android:textSize="16sp" />
+                        <CheckBox
+                            android:id="@+id/checkBox4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="阅读和下载"
+                android:textColor="#ff888888"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1dp"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0" >
+
+                    <TableRow
+                        android:id="@+id/more_page_row5"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17dp"
+                            android:text="在线阅读画质"
+                            android:textColor="#ff333333"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="高清"
+                            android:textColor="#6E6E6E"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/more_page_row6"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17dp"
+                            android:text="缓存文章"
+                            android:textColor="#ff333333"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="较快"
+                            android:textColor="#6E6E6E"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/more_page_row7"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17dp"
+                            android:text="设置下载目录"
+                            android:textColor="#ff333333"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="储存卡1"
+                            android:textColor="#6E6E6E"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/more_page_row8"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17dp"
+                            android:text="缓存设置"
+                            android:textColor="#ff333333"
+                            android:textSize="16sp" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="4dp"
+                android:text="账号和隐私"
+                android:textColor="#ff888888"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TableLayout
+                    android:id="@+id/MorePageTableLayout_Client"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1dp"
+                    android:shrinkColumns="0"
+                    android:stretchColumns="0" >
+
+                    <TableRow
+                        android:id="@+id/more_page_row9"
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17dp"
+                            android:text="账号和绑定设置"
+                            android:textColor="#ff333333"
+                            android:textSize="16sp"
+                            android:id="@+id/tv_online" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/more_page_row10"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="16dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="17dp"
+                            android:text="消息和隐私设置"
+                            android:textColor="#ff333333"
+                            android:textSize="16sp" />
+
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="4dp"
+                        android:text="工具"
+                        android:textColor="#ff888888"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TableLayout
+                            android:id="@+id/MorePageTableLayout_Follow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="1dp"
+                            android:shrinkColumns="0"
+                            android:stretchColumns="0" >
+
+                            <TableRow
+                                android:id="@+id/more_page_row11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_weight="1">
+                                    <TextView
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:textSize="16sp"
+                                        android:text="桌面歌词 "
+                                        android:textColor="#ff333333"/>
+                                </LinearLayout>
+                                <CheckBox
+                                    android:id="@+id/checkBox5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/more_page_row12"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:gravity="center_vertical"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="17dp"
+                                    android:text="显示歌词翻译"
+                                    android:textColor="#ff333333"
+                                    android:textSize="16sp" />
+                                <CheckBox
+                                    android:id="@+id/checkBox6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/more_page_row13"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:gravity="center_vertical"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="17dp"
+                                    android:text="目录离线包"
+                                    android:textColor="#ff333333"
+                                    android:textSize="16sp" />
+                                <CheckBox
+                                    android:id="@+id/checkBox7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/more_page_row14"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:gravity="center_vertical"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="17dp"
+                                    android:text="扫一扫"
+                                    android:textColor="#ff333333"
+                                    android:textSize="16sp"
+                                    android:id="@+id/tv_auto1"/>
+
+                            </TableRow>
+                            <TableRow
+                                android:id="@+id/more_page_row15"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:gravity="center_vertical"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="17dp"
+                                    android:text="桌面小部件"
+                                    android:textColor="#ff333333"
+                                    android:textSize="16sp"/>
+                            </TableRow>
+                            <TableRow
+                                android:id="@+id/more_page_row16"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp" >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:gravity="center_vertical"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="17dp"
+                                    android:text="锁屏显示"
+                                    android:textColor="#ff333333"
+                                    android:textSize="16sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="云阅读锁屏"
+                                    android:textColor="#6E6E6E"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:id="@+id/more_page_row17"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:gravity="center_vertical"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="17dp"
+                                    android:text="通知栏颜色"
+                                    android:textColor="#ff333333"
+                                    android:textSize="16sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="系统底色"
+                                    android:textColor="#6E6E6E"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:id="@+id/more_page_row18"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="2dp"
+                                android:layout_marginRight="2dp"
+
+                                android:paddingBottom="16dp"
+                                android:paddingTop="16dp" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:drawablePadding="10dp"
+                                    android:gravity="center_vertical"
+                                    android:includeFontPadding="false"
+                                    android:paddingLeft="17dp"
+                                    android:text="自动下载最新安装包"
+                                    android:textColor="#ff333333"
+                                    android:textSize="16sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="从不"
+                                    android:textColor="#6E6E6E"
+                                    />
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

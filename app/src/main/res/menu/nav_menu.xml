@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_1"
+            android:icon="@drawable/nav_jt"
+            android:title="已购和上传" />
+        <item
+            android:id="@+id/nav_2"
+            android:icon="@drawable/nav_jq"
+            android:title="钱包和福利" />
+        <item
+            android:id="@+id/nav_3"
+            android:icon="@drawable/nav_gw"
+            android:title="购物车" />
+        <item
+            android:id="@+id/nav_4"
+            android:icon="@drawable/nav_sj"
+            android:title="想读" />
+        <item
+            android:id="@+id/nav_5"
+            android:icon="@drawable/nav_sd"
+            android:title="书单" />
+        <item
+            android:id="@+id/nav_6"
+            android:icon="@drawable/nav_yx"
+            android:title="笔记" />
+        <item
+            android:id="@+id/nav_7"
+            android:icon="@drawable/nav_mail"
+            android:title="阅历" />
+        <item
+            android:id="@+id/nav_8"
+            android:icon="@drawable/nav_task"
+            android:title="设置" />
+    </group>
+</menu>

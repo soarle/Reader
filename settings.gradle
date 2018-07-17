@@ -1,0 +1,1 @@
+include ':app', ':setting', ':welcome', ':yindao', ':welcome2', ':fenlei'
